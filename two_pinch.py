@@ -1,7 +1,5 @@
 # 両手のピンチ動作を認識してイメージを移動、縮小・拡大するサンプル
 # Ultraleap python-bindings example 参照 : https://github.com/ultraleap/leapc-python-bindings/blob/main/examples/simple_pinching_example.py
-
-
 import cv2
 import time
 import leap
@@ -187,7 +185,8 @@ def main():
             dst = cv2.resize(img, (int(curr_win_w), int(curr_win_h)))
             cv2.imshow('img', dst)
             cv2.moveWindow('img', int(curr_win_x), int(curr_win_y))
-                           
+
+            # 'q'キーを押して、プログラムを終了する
             if cv2.waitKey(1) == ord('q'):
                 break
     cv2.destroyAllWindows()
