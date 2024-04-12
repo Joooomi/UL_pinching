@@ -115,7 +115,8 @@ def main():
             dst = cv2.resize(img, (int(curr_win_w), int(curr_win_h)))
             cv2.imshow('img', dst)
             cv2.moveWindow('img', int(curr_win_x), int(curr_win_y))
-                        
+
+            # 'q'キーを押すとプログラムが終了する
             if cv2.waitKey(1) == ord('q'):
                 break
     cv2.destroyAllWindows()
