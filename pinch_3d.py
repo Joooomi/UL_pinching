@@ -7,12 +7,12 @@ import leap
 from leap import datatypes as ldt
 
 # トリガーが起動した時の指先のX, Y, Z 座標
-prev_x = 0　
-prev_y = 0　
-prev_z = 0　
+prev_x = 0
+prev_y = 0
+prev_z = 0
 
 # トリガーフラグ
-start = False　
+start = False
 
 # 現在のイメージの位置 (移動先)
 curr_win_x = 200
