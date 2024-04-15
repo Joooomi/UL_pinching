@@ -6,10 +6,13 @@ import time
 import leap
 from leap import datatypes as ldt
 
-prev_x = 0　# トリガーが起動した時の指先のX座標
-prev_y = 0　# トリガーが起動した時の指先のY座標
-prev_z = 0　# トリガーが起動した時の指先のZ座標
-start = False　# トリガーフラグ
+# トリガーが起動した時の指先のX, Y, Z 座標
+prev_x = 0　
+prev_y = 0　
+prev_z = 0　
+
+# トリガーフラグ
+start = False　
 
 # 現在のイメージの位置 (移動先)
 curr_win_x = 200
