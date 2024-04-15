@@ -11,14 +11,19 @@ from screeninfo import get_monitors
 m = get_monitors()
 monitor_w = m[0].width
 monitor_h = m[0].height
-    
-start = False　# サイズ変更のトリガーフラグ
-pinching_l = False # 左手のピンチ
-pinching_r = False # 右手のピンチ
-m_start = False # 移動のトリガーフラグ
 
-diff_dist = 0 # 左手と右手の距離変動値
-prev_dist = 0 # トリガーが起動した時のイメージのサイズ
+# サイズ変更のトリガーフラグ
+start = False　
+# 左手・右手のピンチ
+pinching_l = False 
+pinching_r = False 
+# 移動のトリガーフラグ
+m_start = False 
+
+# 左手と右手の距離変動値
+diff_dist = 0 
+# トリガーが起動した時のイメージのサイズ
+prev_dist = 0 
 scale = 1 
 
 # 初期化
@@ -96,8 +101,9 @@ class PinchingListener(leap.Listener):
             # 両手がピンチ動作をしている場合、左手と右手の距離に応じてイメージを縮小・拡大する
             if pinching_l and pinching_r :
                 # ピンチ動作がトリガーとなり、人差し指先の位置情報を追跡し始める
-                if start == False:                            
-                    prev_dist = np.linalg.norm(point_l - point_r) # 両手の距離を計算する (ユークリッド距離)
+                if start == False:         
+                    # 両手の距離を計算する (ユークリッド距離)
+                    prev_dist = np.linalg.norm(point_l - point_r) 
                     prev_vector = (index_l.x - index_r.x, index_l.y - index_r.y)                    
                     start = True
 
