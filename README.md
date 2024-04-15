@@ -5,5 +5,5 @@ pip install numpy
 pip install screeninfo
 
 *LeapC インストール方法
-・Ultraleap社 Github：https://github.com/ultraleap/leapc-python-bindings
-・Cornes WEBマガジン：https://cornestech.co.jp/column/ultraleap_rpi
+- Ultraleap社 Github：https://github.com/ultraleap/leapc-python-bindings
+- Cornes WEBマガジン：https://cornestech.co.jp/column/ultraleap_rpi
