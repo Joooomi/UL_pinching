@@ -13,18 +13,18 @@ monitor_w = m[0].width
 monitor_h = m[0].height
 
 # サイズ変更のトリガーフラグ
-start = False　
+start = False
 # 左手・右手のピンチ
-pinching_l = False 
-pinching_r = False 
+pinching_l = False
+pinching_r = False
 # 移動のトリガーフラグ
-m_start = False 
+m_start = False
 
 # 左手と右手の距離変動値
-diff_dist = 0 
+diff_dist = 0
 # トリガーが起動した時のイメージのサイズ
-prev_dist = 0 
-scale = 1 
+prev_dist = 0
+scale = 1
 
 # 初期化
 point_l = np.array((0,0,0))
