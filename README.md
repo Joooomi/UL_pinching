@@ -1,5 +1,6 @@
 *LeapC, OpenCV, Numpy, screeninfo のインストールが必要です。
 
+
 pip install opencv-python
 pip install numpy
 pip install screeninfo
