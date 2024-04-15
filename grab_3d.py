@@ -30,7 +30,7 @@ curr_win_h, curr_win_w, _ = img.shape
 # 手のひらの位置情報を取得
 def palm_center(hand: ldt.Hand) -> ldt.Vector:
     center = hand.palm.position
-    return (center.x, center.y, center.z)
+    return center
 
 # grab strengthでgrab状態を判断
 def grab_hand(hand: ldt.Hand):
@@ -56,9 +56,9 @@ class GrabListener(leap.Listener):
                 if grab :
                     # grab操作がトリガーとなり、手のひらの位置情報を追跡し始める
                     if start is False:
-                        prev_x = center[0]
-                        prev_y = center[1]
-                        prev_z = center[2]
+                        prev_x = center.x
+                        prev_y = center.y
+                        prev_z = center.z
 
                         prev_win_x = curr_win_x
                         prev_win_y = curr_win_y
@@ -75,7 +75,7 @@ class GrabListener(leap.Listener):
 
                     # 現在の手のひらの位置 (z) とトリガーが起動した時の位置の差を、イメージのスケールとして反映する
                     # カメラのセンターから (-) 方向だと縮小、(+) 方向だと拡大される
-                    resize_rate = center[2] - prev_z                    
+                    resize_rate = center.z - prev_z                    
                     
                     curr_win_w = prev_win_w + resize_rate
                     curr_win_h = prev_win_h + resize_rate                  
