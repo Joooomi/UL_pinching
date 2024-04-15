@@ -2,7 +2,9 @@
 
 
 pip install opencv-python
+
 pip install numpy
+
 pip install screeninfo
 
 *LeapC インストール方法
