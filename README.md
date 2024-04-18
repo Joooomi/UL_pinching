@@ -10,7 +10,7 @@
 *LeapC インストール方法
 - Ultraleap社 Github：https://github.com/ultraleap/leapc-python-bindings
 - Cornes WEBマガジン：https://cornestech.co.jp/column/ultraleap_rpi
-
+(「4. Python環境でハンドトラッキングを実現する Python-bindingの設定」参照)
 
 pinch_3d.py: 片手のピンチジェスチャーを認識し、画像の移動と拡大縮小を行います。
 
