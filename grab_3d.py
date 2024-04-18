@@ -1,3 +1,5 @@
+# Ultraleap python-bindings example 参照 : https://github.com/ultraleap/leapc-python-bindings/blob/main/examples/simple_pinching_example.py
+
 import cv2
 import time
 import leap
